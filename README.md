@@ -9,3 +9,9 @@
 **2021.06.01**
  - setPassword() method 변경: java.security 패키지 사용(MessageDigest, SecureRandom)
  - 해싱을 통한 암호화(SHA-512)과 salt를 사용한 
+
+**2021.06.02**
+ - salt값 저장을 위한 공간 별도 필요
+ - 해싱값과 별개로 salt는 완전 랜덤임
+ - Client class를 상속하고, 계좌 생성 추상메소드를 가지는 MakingBankAccount interface를 구현하는 은행사 별 class를 만듦
+ - 각 은행사 별로 BankSerialNumber를 부여하고, 그 기준으로 각각 개별의 계좌 생성 메소드를 구현함. 
